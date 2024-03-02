@@ -4,7 +4,7 @@ import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { routesConfig } from '../../routes/routesConfig';
 
 const Navbar: React.FC = () => {
-  const navbarElements = routesConfig.filter(route => !!route?.showInNavBar)
+  const navbarElements = routesConfig.filter((route) => !!route?.showInNavBar);
   return (
     <AppBar position="static">
       <Toolbar>

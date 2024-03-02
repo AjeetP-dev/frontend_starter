@@ -1,9 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { allActions } from '../../store/slices';
+import LoginPage from '../login/login';
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const user = useSelector((rootState) => (rootState as any)?.user);
+  const user = useSelector((rootState) => rootState?.user);
+  let hey;
   const { logUserName } = allActions;
   return (
     <div>

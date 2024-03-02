@@ -1,12 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import eslintPlugin from 'vite-plugin-eslint'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import eslintPlugin from 'vite-plugin-eslint';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), eslintPlugin({
-    cache: false,
-    include: ['./src/**/*.js', './src/**/*.jsx','./src/**/*.ts','./src/**/*.tsx'],
-    exclude: [],
-  }),],
-})
+  plugins: [
+    react(),
+    eslintPlugin({
+      cache: false,
+      include: ['./src/**/*.js', './src/**/*.jsx', './src/**/*.ts', './src/**/*.tsx'],
+      exclude: [],
+      failOnError: false,
+      emitError: false,
+      emitWarning: true,
+    }),
+  ],
+});

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 const AboutPage = () => {
-  const stories = useSelector((state: any) => state?.user);
+  const stories = useSelector((state: unknown) => state?.user);
   console.log('stories inside about', stories);
   return (
     <div>

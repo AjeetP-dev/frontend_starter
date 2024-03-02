@@ -16,13 +16,13 @@ const Slices = {
 };
 
 let allSlices: any = {};
-let allActions: any = {}
+let allActions: any = {};
 
 Object.keys(Slices).forEach(slice => {
     allSlices = { ...allSlices, [slice]: (Slices as any)?.[slice] };
-    allActions = { ...allActions, ...((Slices as any)?.[slice]).actions }
+    allActions = { ...allActions, ...((Slices as any)?.[slice]).actions };
 });
 
 
-export { allActions }
+export { allActions };
 export default allSlices;
