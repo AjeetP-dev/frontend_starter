@@ -5,6 +5,7 @@ import { routesConfig } from '../../routes/routesConfig';
 
 const Navbar: React.FC = () => {
   const navbarElements = routesConfig.filter((route) => !!route?.showInNavBar);
+  
   return (
     <AppBar position="static">
       <Toolbar>
