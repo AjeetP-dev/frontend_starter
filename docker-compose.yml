@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:4173"
+    volumes:
+      - .:/starter/frontend_starter
+    command: >
+      sh -c "npx vite build && npx vite preview --host"
